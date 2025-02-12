@@ -31,7 +31,13 @@ useEffect(() => {
 const handleMoleClick = (index) => {
   if (grid[index]) { // If the mole is visible at the clicked index
     setScore(score + 1); // Increment the score by 1
-    
+    /* ------------------------- WORST CODE EVER WRITTEN ------------------------ */
+    const newGrid = new Array(9).fill(false); // Create a new grid
+    const randomIndex = Math.floor(Math.random() * 9); // Generate a random index between 0 and 8
+    newGrid[index] = false; // Hide the mole at the clicked index
+    newGrid[randomIndex] = true; // Set the mole to true at the random index
+    setGrid(newGrid); // Update the grid state
+    /* ----------------------- WORST CODE EVER WRITTEN END ---------------------- */
   }
 };
 

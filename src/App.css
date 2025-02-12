@@ -28,4 +28,9 @@
 .scoreboard {
   font-size: 24px;
   margin: 20px;
-}  
+}
+
+body {
+  color: rgb(0, 0, 0);
+  background-color: blueviolet;
+}
